@@ -1,7 +1,7 @@
-package app;
+package kafka;
 
-import app.controller.*;
-import app.dto.*;
+import app.controller.DateDto;
+import kafka.dto.*;
 import lombok.*;
 import lombok.extern.apachecommons.*;
 import org.junit.jupiter.api.*;

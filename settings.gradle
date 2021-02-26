@@ -9,4 +9,6 @@
 
 rootProject.name = 'examples'
 include 'date-examples'
+include 'kafka'
+include 'mongo'
 

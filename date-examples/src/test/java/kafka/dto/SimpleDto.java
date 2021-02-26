@@ -1,4 +1,4 @@
-package app.dto;
+package kafka.dto;
 
 import com.fasterxml.jackson.annotation.*;
 import lombok.*;
