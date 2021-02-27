@@ -8,7 +8,7 @@ class ParametrizedClass<T>(
 
 }
 
-fun main() {
+fun example() {
     val parametrizedClass = ParametrizedClass<String>("example")
     val parametrizedClass1 = ParametrizedClass("example") // type can be inferred
 }
