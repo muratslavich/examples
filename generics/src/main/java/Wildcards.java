@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /*
@@ -79,4 +80,14 @@ public class Wildcards {
             list.set(i, tmp.get(list.size()-i-1)); // compile-time error
         }
     }
+
+
+
+
+
+    //--------------------------------Examples----------------------------------------
+    public static void copy(List<?> src, List<?> dest) {
+        Collections.<Integer>copy(List.of(""), null);
+    }
+
 }
