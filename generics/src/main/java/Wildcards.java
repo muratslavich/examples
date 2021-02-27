@@ -1,8 +1,5 @@
-package before;
-
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /*
@@ -14,8 +11,6 @@ import java.util.List;
 * */
 
 public class Wildcards {
-
-
 
     private static class Animal { }
 
@@ -32,20 +27,20 @@ public class Wildcards {
 
         // Generics are invariant
         // 1 example
-        List<Animal> animalList = new ArrayList<Dog>(); // compile time error
+//        List<Animal> animalList = new ArrayList<Dog>(); // compile time error
         // 2 example
         List<Animal> animalList1;
         List<Cat> cats = List.of(new Cat[2]);
-        animalList1 = cats; // compile time error
+//        animalList1 = cats; // compile time error
         // 3 example
         List<Integer> ints = Arrays.asList(1,2,3);
-        List<Number> nums = ints; // compile time error
+//        List<Number> nums = ints; // compile time error
 
         // Generics can be covariant with wildcard
         // PECS
         // producer - only get
         List<? extends Animal> animalList2 = new ArrayList<Dog>();
-        animalList2.add(new Dog()); // compile time error
+//        animalList2.add(new Dog()); // compile time error
         animalList2.add(null);
         Animal animal = animalList2.get(0);
 
@@ -53,12 +48,12 @@ public class Wildcards {
         // consumer - only add
         List<? super Dog> animalList3 = new ArrayList<Animal>();
         animalList3.add(new Dog());
-        Animal animal1 = animalList3.get(0); // compile time error
+//        Animal animal1 = animalList3.get(0); // compile time error
         Object object = animalList3.get(0);
 
         // Raw type = ? extend Object
         List<?> animalList4 = new ArrayList<>();
-        animalList4.add(new Dog());
+//        animalList4.add(new Dog());
         animalList4.add(null);
         Object o = animalList4.get(0);
 

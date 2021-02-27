@@ -1,5 +1,3 @@
-package before;
-
 import java.util.Collection;
 
 public class TypeVariables {

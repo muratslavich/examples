@@ -1,5 +1,3 @@
-package before;
-
 import java.util.List;
 
 public class Generics {
