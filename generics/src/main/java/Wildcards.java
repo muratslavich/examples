@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 /*
@@ -77,7 +76,7 @@ public class Wildcards {
     public static <T> void rev(List<T> list) {
         List<T> tmp = new ArrayList<T>(list);
         for (int i = 0; i < list.size(); i++) {
-            list.set(i, tmp.get(list.size()-i-1)); // compile-time error
+            list.set(i, tmp.get(list.size()-i-1));
         }
     }
 
@@ -86,8 +85,14 @@ public class Wildcards {
 
 
     //--------------------------------Examples----------------------------------------
-    public static void copy(List<?> src, List<?> dest) {
-        Collections.<Integer>copy(List.of(""), null);
+    public static <T> void copy(List<? extends T> src, List<? super T> dest) {
+        if (dest.size() < src.size()) {
+            throw new RuntimeException("dest out of bound");
+        }
+
+        for (int i = 0; i < src.size(); i++) {
+            dest.set(i, src.get(i));
+        }
     }
 
 }
