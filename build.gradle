@@ -7,6 +7,9 @@ allprojects {
 }
 
 def lombokVersion = '1.18.24'
+def springVersion = ''
+def springBootVersion = ''
+def kotlinVersion = ''
 
 subprojects {
     apply plugin: 'java'
@@ -16,8 +19,8 @@ subprojects {
         compileOnly 'org.springframework:spring-context:5.3.1'
 
         // testing
-        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api'
+        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
 
         // lombok
         compileOnly "org.projectlombok:lombok:$lombokVersion"

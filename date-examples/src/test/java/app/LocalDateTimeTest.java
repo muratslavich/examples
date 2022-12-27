@@ -1,9 +1,8 @@
-package kafka;
+package app;
 
 import app.controller.DateDto;
-import kafka.dto.*;
+import app.dto.SimpleDto;
 import lombok.*;
-import lombok.extern.apachecommons.*;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.boot.test.autoconfigure.json.*;
@@ -13,7 +12,6 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @JsonTest
-@CommonsLog
 public class LocalDateTimeTest {
 
     @Autowired
