@@ -15,10 +15,10 @@ pluginManagement {
 
 
 rootProject.name = 'examples'
-//include 'date-examples'
-//include 'kafka'
-//include 'mongo'
-//include 'generics'
+include 'date-examples'
+include 'kafka'
+include 'mongo'
+include 'generics'
 include 'microservice-plugin'
 include 'microservice-plugin-test'
 
