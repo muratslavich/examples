@@ -13,32 +13,34 @@ class Main : Plugin<Project> {
 
         project.task("hello") {
             doLast {
-                println("Hello from the ${extension.kotlin.kotlinVersion.get()}")
+                println("Hello from the ${extension.kotlin.isInitialized()}")
             }
         }
     }
 
 }
 
-
-
 open class MicroservicePluginExtension(project: Project) {
-    private val objects = project.objects
 
-    val kotlin: KotlinPack = objects.newInstance(KotlinPack::class.java)
-    val spring: SpringPack = objects.newInstance(SpringPack::class.java)
-    val springBoot: SpringBootPack = objects.newInstance(SpringBootPack::class.java)
+    private val objects by lazy { project.objects }
+    val kotlin: Lazy<KotlinPack> = lazyInstance()
+    val spring: Lazy<SpringPack> = lazyInstance()
+    val springBoot: Lazy<SpringBootPack> = lazyInstance()
 
     fun kotlin(action: Action<KotlinPack>) {
-        action.execute(kotlin)
+        action.execute(kotlin.value)
     }
 
     fun spring(action: Action<SpringPack>) {
-        action.execute(spring)
+        action.execute(spring.value)
     }
 
     fun springBoot(action: Action<SpringBootPack>) {
-        action.execute(springBoot)
+        action.execute(springBoot.value)
+    }
+
+    private inline fun <reified T> lazyInstance(): Lazy<T> {
+        return lazy { objects.newInstance(T::class.java) }
     }
 }
 
