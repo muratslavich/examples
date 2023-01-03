@@ -9,13 +9,11 @@ repositories {
     mavenCentral()
 }
 
-//microservice {
-//    kotlin {
-//        kotlinVersion = "sd"
-//    }
-////    kotlinVersion.set("kotlin")
-////    jvmTargetVersion.set("jvm")
-//}
+microservice {
+    kotlin {
+        kotlinVersion.set("dsd")
+    }
+}
 
 dependencies {
 }

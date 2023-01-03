@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "1.7.22"
+    `kotlin-dsl`
 
     // https://plugins.gradle.org/docs/publish-plugin
     // Auto-apply `java-gradle-plugin` plugin
