@@ -22,3 +22,11 @@ gradlePlugin {
         }
     }
 }
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(kotlin("stdlib"))
+}
