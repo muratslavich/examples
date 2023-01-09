@@ -1,5 +1,7 @@
 plugins {
     id("microservice-plugin")
+//    kotlin("jvm") version "1.7.22"
+//    application
 }
 
 group = "com.prot.example"
@@ -11,9 +13,22 @@ repositories {
 
 microservice {
     kotlin {
-        kotlinVersion.set("dsd")
+        kotlinVersion.set("1.7.21")
     }
 }
 
 dependencies {
 }
+
+//sourceSets {
+//    main {
+//        kotlin.srcDir("src/main/kotlin")
+//    }
+//}
+
+//task("prepareDirs") {
+//    doLast {
+//        mkdir( "${projectDir}/src/${sourceSets.main.name}/kotlin/${project.group.toString().replace('.', '/')}" )
+//        mkdir( "${projectDir}/src/${sourceSets.test.name}/kotlin/${project.group.toString().replace('.', '/')}" )
+//    }
+//}

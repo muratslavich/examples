@@ -1,4 +1,5 @@
 plugins {
+    // https://plugins.gradle.org/plugin/org.gradle.kotlin.kotlin-dsl
     `kotlin-dsl`
 
     // https://plugins.gradle.org/docs/publish-plugin
@@ -28,5 +29,6 @@ repositories {
 }
 
 dependencies {
-    implementation(kotlin("stdlib"))
+    api(kotlin("stdlib"))
+    api("org.jetbrains.kotlin:kotlin-gradle-plugin")
 }

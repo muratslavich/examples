@@ -32,3 +32,11 @@ plugins {
     id '<myplugin-id>' version '<myplugin-version>'
 }
 ```
+
+
+
+
+
+
+
+https://gradle-initializr.cleverapps.io/
