@@ -6,32 +6,3 @@ allprojects {
         mavenCentral()
     }
 }
-
-def lombokVersion = '1.18.24'
-def springVersion = ''
-def springBootVersion = ''
-def kotlinVersion = ''
-def javaVersion = ''
-
-subprojects {
-//    apply plugin: 'java'
-//    apply plugin: 'application'
-
-    repositories {
-        mavenCentral()
-    }
-
-    dependencies {
-//        compileOnly 'org.springframework:spring-context:5.3.1'
-
-//        // lombok
-//        compileOnly "org.projectlombok:lombok:$lombokVersion"
-//        annotationProcessor "org.projectlombok:lombok:$lombokVersion"
-//        testCompileOnly "org.projectlombok:lombok:$lombokVersion"
-//        testAnnotationProcessor "org.projectlombok:lombok:$lombokVersion"
-    }
-
-//    test {
-//        useJUnitPlatform()
-//    }
-}

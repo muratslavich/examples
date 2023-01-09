@@ -31,4 +31,5 @@ repositories {
 dependencies {
     api(kotlin("stdlib"))
     api("org.jetbrains.kotlin:kotlin-gradle-plugin")
+    api("io.gitlab.arturbosch.detekt:detekt-gradle-plugin:1.22.0")
 }

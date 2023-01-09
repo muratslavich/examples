@@ -8,6 +8,10 @@
  */
 pluginManagement {
     includeBuild('microservice-plugin')
+    repositories {
+        gradlePluginPortal()
+        mavenCentral()
+    }
 }
 
 
