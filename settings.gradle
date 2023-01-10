@@ -16,9 +16,9 @@ pluginManagement {
 
 
 rootProject.name = 'examples'
-//include 'date-examples'
-//include 'kafka'
-//include 'mongo'
-//include 'generics'
+include 'date-examples'
+include 'kafka'
+include 'mongo'
+include 'generics'
 include 'microservice-plugin-test'
 include 'spring-plain-console-application'
