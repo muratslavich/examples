@@ -35,7 +35,7 @@ abstract class KotlinPack : GenericPack{
             implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:${coroutinesVersion.get()}")
             testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:${coroutinesVersion.get()}")
 
-            implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.14.1")
+            implementation("org.jetbrains.kotlin:kotlin-reflect")
 
             testImplementation("io.kotest:kotest-assertions-core:${kotestVersion.get()}")
             testImplementation("io.kotest:kotest-assertions-core-jvm:${kotestVersion.get()}")

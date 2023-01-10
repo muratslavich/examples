@@ -1,7 +1,9 @@
 package com.prot.plugin.plugins
 
 import com.prot.plugin.detektExtension
+import com.prot.plugin.implementation
 import com.prot.plugin.microserviceExtension
+import com.prot.plugin.testImplementation
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.jvm.toolchain.JavaLanguageVersion
@@ -28,5 +30,19 @@ class CustomKotlinPlugin : Plugin<Project> {
             mkdir( "${projectDir}/src/test/kotlin/${project.group.toString().replace('.', '/')}" )
         }
 
+        afterEvaluate {
+            plugins.withId("org.springframework.boot") {
+                dependencies.apply {
+                    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
+                    testImplementation("io.kotest.extensions:kotest-extensions-spring:1.1.2")
+                    testImplementation("io.mockk:mockk:1.13.3")
+                }
+
+                pluginManager.run {
+                    apply("org.jetbrains.kotlin.plugin.spring")
+                    apply("org.jetbrains.kotlin.plugin.jpa")
+                }
+            }
+        }
     }
 }

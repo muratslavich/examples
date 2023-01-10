@@ -15,4 +15,7 @@ microservice {
         jvmTargetVersion.set("17")
         coroutinesVersion.set("1.6.4")
     }
+    springBoot {
+        springBootVersion.set("")
+    }
 }

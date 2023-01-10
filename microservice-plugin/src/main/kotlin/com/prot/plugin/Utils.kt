@@ -8,10 +8,10 @@ import org.gradle.api.artifacts.dsl.DependencyHandler
 class Utils {
 }
 
-val Project.microserviceExtension: MicroservicePluginExtension
+internal val Project.microserviceExtension: MicroservicePluginExtension
     get() = extensions.getByType(MicroservicePluginExtension::class.java)
 
-val Project.detektExtension: DetektExtension
+internal val Project.detektExtension: DetektExtension
     get() = extensions.getByType(DetektExtension::class.java)
 
 fun DependencyHandler.`implementation`(dependencyNotation: Any): Dependency =
@@ -34,6 +34,3 @@ fun DependencyHandler.`testCompileOnly`(dependencyNotation: Any): Dependency =
 
 fun DependencyHandler.`testAnnotationProcessor`(dependencyNotation: Any): Dependency =
     add("testAnnotationProcessor", dependencyNotation)!!
-
-fun DependencyHandler.`api`(dependencyNotation: Any): Dependency =
-    add("api", dependencyNotation)!!
