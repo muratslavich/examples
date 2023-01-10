@@ -22,3 +22,5 @@ include 'mongo'
 include 'generics'
 include 'microservice-plugin-test'
 include 'spring-plain-console-application'
+include 'upload-and-retrieve-images-sse'
+

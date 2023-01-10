@@ -40,3 +40,7 @@ plugins {
 
 
 https://gradle-initializr.cleverapps.io/
+
+
+- all-open не включен если использовать springBoot и kotlin
+- таска для создания шаблона приложения
