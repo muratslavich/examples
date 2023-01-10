@@ -58,6 +58,4 @@ class Config {
     @Bean
     fun checkDirectories(@Value("\${data.dir}") absolutePath: String): Path =
         Files.createDirectories(Paths.get(absolutePath + UPLOAD_DIRECTORY))
-
-
 }
